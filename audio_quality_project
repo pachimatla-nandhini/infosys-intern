@@ -1,0 +1,11 @@
+from backend.quality_scorer import QualityScorer
+
+scorer = QualityScorer()
+
+final_score, details = scorer.score(
+    audio_path="samples/sample_audio.wav",
+    expected_duration=30
+)
+
+print("Final Score:", final_score)
+print("Detailed Scores:", details)
